@@ -5,10 +5,15 @@
 	$db = mysqli_select_db($connection,"lms");
 	$book_name = "";
 	$author = "";
+	$cat_name= "";
 	$category = "";
 	$book_no = "";
 	$price = "";
-	$query = "select books.book_name,books.book_no,books.book_price,authors.author_name from books left join authors on books.author_id = authors.author_id";
+	$query = "select books.book_name,books.book_no,books.book_price,authors.author_name,category.cat_name 
+			  from books 
+			  join authors on books.author_id = authors.author_id 
+			  join category on books.cat_id = category.cat_id";
+	//$query = "select books.book_name,books.book_no,books.book_price,authors.author_name,category.cat_name from books, authors, category where  books.author_id = authors.author_id and books.cat_id = category.cat_id";
 ?>
 <!DOCTYPE html>
 <html>
@@ -31,7 +36,7 @@
 	<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
 		<div class="container-fluid">
 			<div class="navbar-header">
-				<a class="navbar-brand" href="index.php">Library Management System(LMS)</a>
+				<a class="navbar-brand" href="admin_dashboard.php">Library Management System(LMS)</a>
 			</div>
 			<font style="color: white"><span><strong>Welcome: <?php echo $_SESSION['name'];?></strong></span></font>
 			<font style="color: white"><span><strong>Email: <?php echo $_SESSION['email'];?></strong></span></font>
@@ -57,26 +62,26 @@
 			<li class="nav-item dropdown">
 				<a class="nav-link dropdown-toggle" data-toggle="dropdown">Book</a>
 				<div class="dropdown-menu">
-					<a href="" class="dropdown-item">Add New Book</a>
-					<a href="" class="dropdown-item">Manage Books</a>
+					<a href="add_book.php" class="dropdown-item">Add New Book</a>
+					<a href="manage_book.php" class="dropdown-item">Manage Books</a>
 				</div>
 			</li>
 			<li class="nav-item dropdown">
 				<a class="nav-link dropdown-toggle" data-toggle="dropdown">Category</a>
 				<div class="dropdown-menu">
-					<a href="" class="dropdown-item">Add New Category</a>
-					<a href="" class="dropdown-item">Manage Category</a>
+					<a href="add_cat.php" class="dropdown-item">Add New Category</a>
+					<a href="manage_cat.php" class="dropdown-item">Manage Category</a>
 				</div>
 			</li>
 			<li class="nav-item dropdown">
 				<a class="nav-link dropdown-toggle" data-toggle="dropdown">Author</a>
 				<div class="dropdown-menu">
-					<a href="" class="dropdown-item">Add New Author</a>
-					<a href="" class="dropdown-item">Manage Authors</a>
+					<a href="add_author.php" class="dropdown-item">Add New Author</a>
+					<a href="manage_author.php" class="dropdown-item">Manage Authors</a>
 				</div>
 			</li>
 			<li class="nav-item">
-				<a href="" class="nav-link">Issue Book</a>
+				<a href="issue_book.php" class="nav-link">Issue Book</a>
 			</li>
 		</ul>
 	</div>
@@ -91,6 +96,7 @@
 				<tr>
 					<th>Name:</th>
 					<th>Author:</th>
+					<th>Category</th>
 					<th>Price:</th>
 					<th>Number:</th>
 				</tr>
@@ -99,12 +105,14 @@
 					while($row = mysqli_fetch_assoc($query_run)){
 						$book_name = $row['book_name'];
 						$author_name = $row['author_name'];
+						$cat_name = $row['cat_name'];
 						$price = $row['book_price'];
 						$book_no = $row['book_no'];
 				?>
 						<tr>
 							<td><?php echo $book_name;?></td>
 							<td><?php echo $author_name;?></td>
+							<td><?php echo $cat_name;?></td>
 							<td><?php echo $price;?></td>
 							<td><?php echo $book_no;?></td>
 						</tr>

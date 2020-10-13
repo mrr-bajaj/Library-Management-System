@@ -19,7 +19,7 @@
 	<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
 		<div class="container-fluid">
 			<div class="navbar-header">
-				<a class="navbar-brand" href="index.php">Library Management System(LMS)</a>
+				<a class="navbar-brand" href="admin_dashboard.php">Library Management System(LMS)</a>
 			</div>
 			<ul class="nav navbar-nav navbar-right">
 				<li class="nav-item">
@@ -79,6 +79,7 @@
 							if($row['password'] == $_POST['password']){
 								$_SESSION['name'] = $row['name'];
 								$_SESSION['email'] = $row['email'];
+								$_SESSION['id']= $row['id'];
 								header("Location:admin_dashboard.php");
 							}
 							else{

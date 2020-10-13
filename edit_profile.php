@@ -6,7 +6,7 @@
 	$email = "";
 	$mobile = "";
 	$address = "";
-	$query = "select * from users where email = '$_SESSION[email]'";
+	$query = "select * from users where id = '$_SESSION[id]'";
 	$query_run = mysqli_query($connection,$query);
 	while($row = mysqli_fetch_assoc($query_run)){
 		$name = $row['name'];

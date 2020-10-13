@@ -5,7 +5,7 @@
 	$name = "";
 	$email = "";
 	$mobile = "";
-	$query = "select * from admins where email = '$_SESSION[email]'";
+	$query = "select * from admins where id = '$_SESSION[id]'";
 	$query_run = mysqli_query($connection,$query);
 	while($row = mysqli_fetch_assoc($query_run)){
 		$name = $row['name'];
@@ -47,7 +47,7 @@
 						<a class="dropdown-item" href="change_password.php">Change Password</a>
 					</div>
 				</li>
-				<li class="nav-item"><a class="nav-link" href="logout.php">Logout</a></li>
+				<li class="nav-item"><a class="nav-link" href="../logout.php">Logout</a></li>
 			</ul>
 		</div>
 	</nav><br>

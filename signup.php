@@ -23,13 +23,13 @@
 			</div>
 			<ul class="nav navbar-nav navbar-right">
 				<li class="nav-item">
-					<a class="nav-link" href="index.php">Admin Login</a>
+					<a class="nav-link" href="admin/index.php">Admin Login</a>
 				</li>
 				<li class="nav-item">
 					<a class="nav-link" href="index.php">User Login</a>
 				</li>
 				<li class="nav-item">
-					<a class="nav-link" href="index.php">Register</a>
+					<a class="nav-link" href="signup.php">Register</a>
 				</li>
 			</ul>
 		</div>

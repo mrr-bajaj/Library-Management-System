@@ -28,7 +28,7 @@
 	<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
 		<div class="container-fluid">
 			<div class="navbar-header">
-				<a class="navbar-brand" href="index.php">Library Management System(LMS)</a>
+				<a class="navbar-brand" href="user_dashboard.php">Library Management System(LMS)</a>
 			</div>
 			<font style="color: white"><span><strong>Welcome: <?php echo $_SESSION['name'];?></strong></span></font>
 			<font style="color: white"><span><strong>Email: <?php echo $_SESSION['email'];?></strong></span></font>
@@ -41,43 +41,10 @@
 						<a class="dropdown-item" href="change_password.php">Change Password</a>
 					</div>
 				</li>
-				<li class="nav-item"><a class="nav-link" href="../logout.php">Logout</a></li>
+				<li class="nav-item"><a class="nav-link" href="logout.php">Logout</a></li>
 			</ul>
 		</div>
 	</nav>
-<nav class="navbar navbar-expand-lg navbar-light" style="background-color: #e3f2fd">
-	<div class="container-fluid">
-		<ul class="nav navbar-nav navbar-center">
-			<li class="nav-item">
-				<a href="admin_dashboard.php" class="nav-link">Dashboard</a>
-			</li>
-			<li class="nav-item dropdown">
-				<a class="nav-link dropdown-toggle" data-toggle="dropdown">Book</a>
-				<div class="dropdown-menu">
-					<a href="" class="dropdown-item">Add New Book</a>
-					<a href="" class="dropdown-item">Manage Books</a>
-				</div>
-			</li>
-			<li class="nav-item dropdown">
-				<a class="nav-link dropdown-toggle" data-toggle="dropdown">Category</a>
-				<div class="dropdown-menu">
-					<a href="" class="dropdown-item">Add New Category</a>
-					<a href="" class="dropdown-item">Manage Category</a>
-				</div>
-			</li>
-			<li class="nav-item dropdown">
-				<a class="nav-link dropdown-toggle" data-toggle="dropdown">Author</a>
-				<div class="dropdown-menu">
-					<a href="" class="dropdown-item">Add New Author</a>
-					<a href="" class="dropdown-item">Manage Authors</a>
-				</div>
-			</li>
-			<li class="nav-item">
-				<a href="" class="nav-link">Issue Book</a>
-			</li>
-		</ul>
-	</div>
-</nav>
 
 <span><marquee>This is library Management System. Library opens at 8:00 AM and close at 8:00 PM</marquee></span><br><br>
 <div class="row">

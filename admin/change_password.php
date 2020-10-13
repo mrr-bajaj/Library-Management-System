@@ -22,7 +22,7 @@
 	<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
 		<div class="container-fluid">
 			<div class="navbar-header">
-				<a class="navbar-brand" href="index.php">Library Management System(LMS)</a>
+				<a class="navbar-brand" href="admin_dashboard.php">Library Management System(LMS)</a>
 			</div>
 			<font style="color: white"><span><strong>Welcome: <?php echo $_SESSION['name'];?></strong></span></font>
 			<font style="color: white"><span><strong>Email: <?php echo $_SESSION['email'];?></strong></span></font>
@@ -35,7 +35,7 @@
 						<a class="dropdown-item" href="change_password.php">Change Password</a>
 					</div>
 				</li>
-				<li class="nav-item"><a class="nav-link" href="logout.php">Logout</a></li>
+				<li class="nav-item"><a class="nav-link" href="../logout.php">Logout</a></li>
 			</ul>
 		</div>
 	</nav><br>
