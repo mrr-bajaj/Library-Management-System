@@ -34,13 +34,13 @@
   	</style>
 </head>
 <body>
-	<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+	<nav class="navbar navbar-expand-lg navbar-fixed-top navbar-light" style="background-color: #e3f2fd">
 		<div class="container-fluid">
 			<div class="navbar-header">
-				<a class="navbar-brand" href="user_dashboard.php">Library Management System(LMS)</a>
+				<a class="navbar-brand" href="user_dashboard.php"><h1>Library Management System</h1></a>
 			</div>
-			<font style="color: white"><span><strong>Welcome: <?php echo $_SESSION['name'];?></strong></span></font>
-			<font style="color: white"><span><strong>Email: <?php echo $_SESSION['email'];?></strong></span></font>
+			<font style="color: black"><span><strong>Welcome: <?php echo $_SESSION['name'];?></strong></span></font>
+			<font style="color: black"><span><strong>Email: <?php echo $_SESSION['email'];?></strong></span></font>
 			<ul class="nav navbar-nav navbar-right">
 				<li class="nav-item dropdown">
 					<a class="nav-link dropdown-toggle" data-toggle="dropdown">My Profile</a>
@@ -54,7 +54,7 @@
 			</ul>
 		</div>
 	</nav><br>
-	<span><marquee>This is library Management System. Library opens at 8:00 AM and close at 8:00 PM</marquee></span><br><br>
+	<span><marquee>Library opens at 8:00 AM and close at 8:00 PM</marquee></span><br><br>
 	<div class="row">
 		<div class="col-md-4"></div>
 		<div class="col-md-4">
