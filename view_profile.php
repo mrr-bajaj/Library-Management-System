@@ -25,12 +25,24 @@
   	<script type="text/javascript" src="bootstrap-4.4.1/js/juqery_latest.js"></script>
   	<script type="text/javascript" src="bootstrap-4.4.1/js/bootstrap.min.js"></script>
   	<style type="text/css">
-  		#side_bar{
-  			background-color: whitesmoke;
-  			padding: 50px;
-  			width: 300px;
-  			height: 450px;
+ 		#side_bar{
+			  font-family: "Trebuchet MS", Helvetica, sans-serif;
+  			background-color: #f1ff94;
+  			padding: 40px;
+  			height: 350px;
+			
   		}
+		#wr{
+			  font-family: "Lucida Console", Courier, monospace;
+			padding: 30px;
+		}
+		h2{
+			text-shadow: 2px 2px #adb2ba;
+		}
+		h1{
+			 font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif;
+			
+		}
   	</style>
 </head>
 <body>

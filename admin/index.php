@@ -52,8 +52,8 @@
 		<div class="col-md-8" id="main_content">
 			<center><h2>Admin Login Form</h2></center>
 			<form action="" method="post">
-				<div class="form-group">
-					<label for="name" id="wr">Email ID:</label>
+				<div class="form-group"  id="wr">
+					<label for="name">Email ID:</label>
 					<input type="text" name="email" class="form-control" required>
 				</div>
 				<div class="form-group" id="wr">
@@ -72,6 +72,11 @@
 					$db = mysqli_select_db($connection,"lms");
 					$query = "select * from admins where email = '$_POST[email]'";
 					$query_run = mysqli_query($connection,$query);
+					if (!(filter_var($_POST['email'], FILTER_VALIDATE_EMAIL))) {
+                            								?>
+								<br><br><center><span class="alert-danger">INVALID EMAIL!</span></center>
+								<?php
+                    }
 					while($row = mysqli_fetch_assoc($query_run)){
 						if($row['email'] == $_POST['email']){
 							if($row['password'] == $_POST['password']){

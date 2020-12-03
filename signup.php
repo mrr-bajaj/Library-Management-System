@@ -57,15 +57,15 @@
 				</div>
 				<div class="form-group"  id="wr">
 					<label for="name" >Email ID:</label>
-					<input type="text" name="email" class="form-control" required>
+					<input type="text" name="email" class="form-control" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{3}$" required>
 				</div>
 				<div class="form-group"  id="wr">
 					<label for="name">Password:</label>
-					<input type="password" name="password" class="form-control" required>
+					<input type="password" name="password" class="form-control" pattern="(?=.*[a-z])(?=.*[A-Z]).{6,}" placeholder="At least 6 characters,one lower case and one upper case letter required" required>
 				</div>
 				<div class="form-group"  id="wr">
 					<label for="name">Mobile Number:</label>
-					<input type="text" name="mobile" class="form-control" required>
+					<input type="text" name="mobile" class="form-control" pattern="[0-9]{10}" placeholder="10 digits only" required>
 				</div>
 				<div class="form-group" id="wr">
 					<label for="name">Address:</label>

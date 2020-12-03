@@ -76,11 +76,11 @@
 				</div>
 				<div class="form-group">
 					<label>Email:</label>
-					<input type="text" class="form-control" value="<?php echo $email;?>" name="email">
+					<input type="text" name="email" class="form-control" value="<?php echo $email;?>" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{3}$" required>
 				</div>
 				<div class="form-group">
 					<label>Mobile:</label>
-					<input type="text" class="form-control" value="<?php echo $mobile;?>" name="mobile">
+					<input type="text" name="mobile" value="<?php echo $mobile;?>" class="form-control" pattern="[0-9]{10}" placeholder="10 digits only" required>
 				</div>
 				<div class="form-group">
 					<label>Address:</label>

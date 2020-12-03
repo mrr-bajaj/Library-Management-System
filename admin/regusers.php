@@ -21,21 +21,34 @@
   	<script type="text/javascript" src="../bootstrap-4.4.1/js/bootstrap.min.js"></script>
   	<style type="text/css">
   		#side_bar{
-  			background-color: whitesmoke;
-  			padding: 50px;
-  			width: 300px;
-  			height: 450px;
+			  font-family: "Trebuchet MS", Helvetica, sans-serif;
+  			background-color: #f1ff94;
+  			padding: 40px;
+  			height: 350px;
+			
   		}
+		#wr{
+			  font-family: "Lucida Console", Courier, monospace;
+			padding: 30px;
+		}
+		h2{
+			text-shadow: 2px 2px #adb2ba;
+		}
+		h1{
+			 font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif;
+			
+		}
+  		
   	</style>
 </head>
 <body>
-	<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+	<nav class="navbar navbar navbar-expand-lg navbar-fixed-top navbar-light" style="background-color: #e3f2fd">
 		<div class="container-fluid">
 			<div class="navbar-header">
-				<a class="navbar-brand" href="admin_dashboard.php">Library Management System(LMS)</a>
+				<a class="navbar-brand" href="admin_dashboard.php"><h1>Library Management System</h1></a>
 			</div>
-			<font style="color: white"><span><strong>Welcome: <?php echo $_SESSION['name'];?></strong></span></font>
-			<font style="color: white"><span><strong>Email: <?php echo $_SESSION['email'];?></strong></span></font>
+			<font style="color: black"><span><strong>Welcome: <?php echo $_SESSION['name'];?></strong></span></font>
+			<font style="color: black"><span><strong>Email: <?php echo $_SESSION['email'];?></strong></span></font>
 			<ul class="nav navbar-nav navbar-right">
 				<li class="nav-item dropdown">
 					<a class="nav-link dropdown-toggle" data-toggle="dropdown">My Profile</a>
@@ -49,7 +62,7 @@
 			</ul>
 		</div>
 	</nav>
-<nav class="navbar navbar-expand-lg navbar-light" style="background-color: #e3f2fd">
+<nav class="navbar navbar-expand-lg navbar-dark" style="background-color: #1f0c3b">
 	<div class="container-fluid">
 		<ul class="nav navbar-nav navbar-center">
 			<li class="nav-item">

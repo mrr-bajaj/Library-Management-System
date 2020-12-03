@@ -23,21 +23,33 @@
   	<script type="text/javascript" src="../bootstrap-4.4.1/js/bootstrap.min.js"></script>
   	<style type="text/css">
   		#side_bar{
-  			background-color: whitesmoke;
-  			padding: 50px;
-  			width: 300px;
-  			height: 450px;
+			  font-family: "Trebuchet MS", Helvetica, sans-serif;
+  			background-color: #f1ff94;
+  			padding: 40px;
+  			height: 350px;
+			
   		}
+		#wr{
+			  font-family: "Lucida Console", Courier, monospace;
+			padding: 30px;
+		}
+		h2{
+			text-shadow: 2px 2px #adb2ba;
+		}
+		h1{
+			 font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif;
+			
+		}
   	</style>
 </head>
 <body>
-	<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+	<nav class="navbar navbar navbar-expand-lg navbar-fixed-top navbar-light" style="background-color: #e3f2fd">
 		<div class="container-fluid">
 			<div class="navbar-header">
-				<a class="navbar-brand" href="admin_dashboard.php">Library Management System(LMS)</a>
+				<a class="navbar-brand" href="admin_dashboard.php"><h1>Library Management System</h1></a>
 			</div>
-			<font style="color: white"><span><strong>Welcome: <?php echo $_SESSION['name'];?></strong></span></font>
-			<font style="color: white"><span><strong>Email: <?php echo $_SESSION['email'];?></strong></span></font>
+			<font style="color: black"><span><strong>Welcome: <?php echo $_SESSION['name'];?></strong></span></font>
+			<font style="color: black"><span><strong>Email: <?php echo $_SESSION['email'];?></strong></span></font>
 			<ul class="nav navbar-nav navbar-right">
 				<li class="nav-item dropdown">
 					<a class="nav-link dropdown-toggle" data-toggle="dropdown">My Profile</a>
@@ -51,7 +63,7 @@
 			</ul>
 		</div>
 	</nav><br>
-	<span><marquee>This is library Management System. Library opens at 8:00 AM and close at 8:00 PM</marquee></span><br><br>
+	<span><marquee>Library opens at 8:00 AM and close at 8:00 PM</marquee></span><br><br>
 	<div class="row">
 		<div class="col-md-4"></div>
 		<div class="col-md-4">
@@ -62,11 +74,12 @@
 				</div>
 				<div class="form-group">
 					<label>Email:</label>
-					<input type="text" class="form-control" value="<?php echo $email;?>" name="email">
+					<input type="text" name="email" class="form-control" value="<?php echo $email;?>" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{3}$" required>
 				</div>
 				<div class="form-group">
 					<label>Mobile:</label>
-					<input type="text" class="form-control" value="<?php echo $mobile;?>" name="mobile">
+					<input type="text" name="mobile" value="<?php echo $mobile;?>" class="form-control" pattern="[0-9]{10}" placeholder="10 digits only" required>
+					
 				</div>
 				<button  type="submit" name="update" class="btn btn-primary">Update</button>
 			</form>

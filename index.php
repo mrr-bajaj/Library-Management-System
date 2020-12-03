@@ -71,15 +71,13 @@
 					$db = mysqli_select_db($connection,"lms");
 					$query = "select * from users where email = '$_POST[email]'";
 					$query_run = mysqli_query($connection,$query);
+					if (!(filter_var($_POST['email'], FILTER_VALIDATE_EMAIL))) {
+                            								?>
+								<br><br><center><span class="alert-danger">INVALID EMAIL!</span></center>
+								<?php
+                    }
 					while($row = mysqli_fetch_assoc($query_run)){
-						echo ($_POST['email']);
-						if(!filter_var($_POST['email'], FILTER_VALIDATE_EMAIL)==false){
-							
-							echo 'hi'; 
-                            
-                        
-						}
-						else if($row['email'] == $_POST['email']){
+                    if($row['email'] == $_POST['email']){
 							if($row['password'] == $_POST['password']){
 								$_SESSION['name'] = $row['name'];
 								$_SESSION['email'] = $row['email'];
@@ -91,8 +89,12 @@
 								<br><br><center><span class="alert-danger">Wrong Password</span></center>
 								<?php
 							}
-						}
 					}
+					else{
+						echo 'hi';				
+					}
+					}
+					
 				}
 			?>	
 	</div>
